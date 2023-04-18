@@ -10,7 +10,6 @@ int produtoID = 0;
 
 do
 {
-
     Console.WriteLine(@$"
 
 ==================================
@@ -32,12 +31,10 @@ do
 bool MostrarMenu()
 {
 
-
     input = Console.ReadKey();
 
     if (input.Key == ConsoleKey.D1)
     {
-
         CadastrarProduto();
         sair = false;
         return (sair);
@@ -53,14 +50,13 @@ bool MostrarMenu()
             Console.WriteLine($"\n\nNenhum produto cadastrado, cadastre um produto utilizando a opção 1 do menu.");
         }
 
-
         sair = false;
         return (sair);
     }
     else if (input.Key == ConsoleKey.D0)
     {
         Console.WriteLine($"\n\nSaindo do programa...");
-        
+
         sair = true;
         return (sair);
     }
@@ -125,9 +121,7 @@ void CadastrarProduto()
 
         } while (validadorInput == false);
 
-
     } while (novoProduto == true && produtoID < 3);
-
 }
 
 void ListarProdutos()
